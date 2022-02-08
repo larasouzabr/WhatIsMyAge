@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AgeServiceService } from 'src/services/age-service.service';
 
 @Component({
@@ -11,6 +12,10 @@ export class AppComponent {
   searchRes!: Array<Object>;
   searchStr!: string;
   
+  public searchForm: FormGroup = new FormGroup({
+    name: new FormControl(null, Validators.required)
+  });
+
   constructor(
     private ageServ : AgeServiceService  
       ) { }

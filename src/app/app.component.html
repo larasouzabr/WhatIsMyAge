@@ -1,26 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-  <div class="container-md mt-2">
-    <span>Bem-vindos!</span>
+<div class="justify-text-center">
+<nav class="navbar navbar-expand-md navbar-light justify-content-center">
+  <div class=" mt-2">
   </div>
 </nav>
-<div class="container-md p-3 justify-content-center">
-  <h2>Quer saber qual a sua idade baseada no seu primeiro nome?</h2>
+<h4 class ="header p-3" >Quer saber qual a sua idade baseada no seu primeiro nome?</h4>
+
+<div class="container-md p-3">
   <div>
-    <div class="card text-center">
+    <div class="card text-center" [formGroup] ="searchForm">
       <div class="card-body">
-        <p class="card-text">Digite seu nome:</p>
+        <p class="card-text p-1">Digite seu nome:</p>
         <div class="mb-3">
           <input
             type="text"
             class="form-control"
-            id="formGroupExampleInput"
+            formControlName="name"
             placeholder="Roberta"
+            required minlength="3"
             [(ngModel)]="searchStr"
             name="searchStr"
             (keyup.enter)="getNameAge()"
+          
           />
-          <div class="d-grid d-md-block mt-2">
-            <button class="btn btn-primary" type="button" (click)="getNameAge()">Pesquisar</button>
+          <div class="d-grid d-md-block mt-4">
+            <button class="btn btn-primary" type="button" [disabled]="searchForm.invalid" (click)="getNameAge()">Pesquisar</button>
           </div>
         </div>
       </div>
@@ -28,9 +31,9 @@
     <div>
         <div class="card text-center mt-5">
           <div class="card-body">
-            <span class="card-text">
+            <span class="card-text m-0">
               De acordo com nosso banco, sua idade é de
-              <h3>40</h3>
+              <p><span class="age">40</span></p>
               anos
               <p>Baseado na amostra de </p>
           </span>
@@ -39,6 +42,4 @@
     </div>
   </div>
 </div>
-<div class="container-sm">
-aaaaaaaaaaaaaaaaaaaaaaaaaaaa
 </div>

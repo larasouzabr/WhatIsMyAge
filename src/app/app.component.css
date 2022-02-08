@@ -1,9 +1,38 @@
 .navbar{
-    background-color: brown;
+    background-color: #f53439;
+}
+input{
+background-color: #0e0b50;
+border: none;
+}
+input:focus{
+background-color: #130e72;
+color: #fff;
+}
+.age{
+    font-size: 50px;
+    font-family: 'Gothic A1', sans-serif;
+}
+.btn{
+border: #0e0b50;
+background-color: #0e0b50;
+}
+.btn:disabled{
+    background-color: #0f0b505d;
+}
+.header{
+    font-family: 'Ubuntu', sans-serif;
+    color: #f53439;
+    font-weight: 700;
+}
+.card{
+    color: #fff;
+    background-color: #f53439;
+
 }
 
-.card{
-    max-width: 400px;
+.card-text{
+    background-color: rgba(0, 0, 0, 0.144);
 }
 
 @media (min-width: 576px) { 
@@ -12,17 +41,38 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-
- }
+    .header{
+        font-size: 40px;
+    }
+    .card{
+        width: 450px;
+        font-size: 30px;
+    }
+  }
 
 /*Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    .header{
+        font-size: 40px;
+    }
+    .card{
+        width: 400px;
+        font-size: 30px;
+    }
   }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  .header{
+      font-size: 50px;
+  }
+  .card{
+      width: 500px;
+      font-size: 30px;
+  }
+  .age{
+      font-size: 100px;
+  }
   }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
