@@ -4,9 +4,6 @@
 input {
   border: none;
 }
-input:focus {
-  color: #fff;
-}
 .age {
   font-size: 90px;
   font-family: "Gothic A1", sans-serif;
