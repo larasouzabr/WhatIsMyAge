@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AgeServiceService } from 'src/services/age-service.service';
+import { age } from './interface';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,9 @@ import { AgeServiceService } from 'src/services/age-service.service';
 })
 export class AppComponent {
   title = 'whatIsMyAge';
-  searchRes!: Array<Object>;
+  searchRes!: age;
   searchStr!: string;
-  
+  newConsult! : boolean;
   public searchForm: FormGroup = new FormGroup({
     name: new FormControl(null, Validators.required)
   });
@@ -25,6 +26,12 @@ export class AppComponent {
     this.ageServ.getName(this.searchStr).subscribe(res => {
       this.searchRes = res;
       console.log(this.searchRes)
+      this.newConsult = false;
     })
+  }
+  goBack(){
+    this.searchForm.reset();
+    this.newConsult = true;
+    this.searchStr = '';
   }
 }

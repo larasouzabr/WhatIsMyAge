@@ -7,7 +7,7 @@
 
 <div class="container-md p-3">
   <div>
-    <div class="card text-center" [formGroup] ="searchForm">
+    <div class="card text-center" [formGroup] ="searchForm" *ngIf="!searchRes || newConsult">
       <div class="card-body">
         <p class="card-text p-1">Digite seu nome:</p>
         <div class="mb-3">
@@ -28,15 +28,17 @@
         </div>
       </div>
     </div>
-    <div>
+    <div *ngIf="searchRes && newConsult == false">
         <div class="card text-center mt-5">
           <div class="card-body">
             <span class="card-text m-0">
               De acordo com nosso banco, sua idade é de
-              <p><span class="age">40</span></p>
+              <p><span class="age">{{searchRes.age}}</span></p>
               anos
-              <p>Baseado na amostra de </p>
+              <p>Baseado na amostra de {{searchRes.count}} pessoas </p>
           </span>
+          <button class="btn btn-primary" type="button" (click)="goBack()">Voltar</button>
+
           </div>
       </div>
     </div>
