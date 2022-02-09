@@ -23,11 +23,12 @@ export class AppComponent {
 
 
   getNameAge() {
-    this.ageServ.getName(this.searchStr).subscribe(res => {
+    this.ageServ.getAge(this.searchStr).subscribe(res => {
       this.searchRes = res;
-      console.log(this.searchRes)
+      console.log(this.searchRes);
       this.newConsult = false;
-    })
+    }
+    )
   }
   goBack(){
     this.searchForm.reset();

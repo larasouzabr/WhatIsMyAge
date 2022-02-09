@@ -2,20 +2,25 @@
     background-color: #f53439;
 }
 input{
-background-color: #0e0b50;
-border: none;
+    background-color: #0e0b50;
+    border: none;
 }
 input:focus{
-background-color: #130e72;
-color: #fff;
+    background-color: #130e72;
+    color: #fff;
 }
 .age{
-    font-size: 50px;
+    font-size: 90px;
     font-family: 'Gothic A1', sans-serif;
 }
+.amostra{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
 .btn{
-border: #0e0b50;
-background-color: #0e0b50;
+    border: #0e0b50;
+    background-color: #0e0b50;
 }
 .btn:disabled{
     background-color: #0f0b505d;
@@ -24,17 +29,40 @@ background-color: #0e0b50;
     font-family: 'Ubuntu', sans-serif;
     color: #f53439;
     font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 30% 20%;
+    border-bottom-right-radius: 30% 20%;
 }
 .card{
     color: #fff;
-    background-color: #f53439;
-
+    background: rgba(238, 6, 6, 0.45);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
 }
 
+
+.container-md{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+       
+}
 .card-text{
-    background-color: rgba(0, 0, 0, 0.144);
+    font-weight: 500;
+    font-size: 22px;
 }
 
+.footer{
+    margin-top: 150px; 
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+    color: #fff;
+}
 @media (min-width: 576px) { 
 
  }

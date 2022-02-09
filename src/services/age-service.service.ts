@@ -11,8 +11,8 @@ export class AgeServiceService {
     private http: HttpClient
     ) { }
    
-    getName(name: string):Observable<any>{
-    return this.http.get(`https://api.agify.io?name=${name}&country_id=BR`);
+    getAge(name: string):Observable<any>{
+    return this.http.get(`https://api.agify.io?name=${name}`);
     }
  
 }
